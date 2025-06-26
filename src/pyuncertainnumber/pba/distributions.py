@@ -75,7 +75,10 @@ class Distribution:
     def alpha_cut(self, alpha):
         """alpha cut interface"""
         return self._dist.ppf(alpha)
-
+    
+    def ppf(self, alpha):
+        return self.alpha_cut(alpha)
+    
     def make_naked_value(self):
         """one value representation of the distribution
         note:
